@@ -1,28 +1,196 @@
 <!DOCTYPE html>
-<html lang=en-ca>
+<html lang="en-ca">
 <head>
 	<meta charset="utf-8">
-	<meta name="Erin Camelon">
-	<meta name="keywords" content=""> <!--make sure to enter some keywords here-->
-
 	<title>Assignment 3</title>
 
-	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
 	<style type="text/css">
-
-	h1,h2 {
-			color: green;
+		
+		body {
+            background-color: green;     
+        }
+        h1 {
+			color: #382EC8;
 			text-align: center;
+			font-size: 50px;
 		}
 
+		h2 {
+			color: #382EC8;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		p {
+			
+			color: #A42EC8;
+			text-align: center;
+			font-size: 28px;
+			font-style: italic;
+		}		
+
+	</style>
 </head>
 <body>
-	<header>
-		<h1>Assignment 3</h1>
-	</header>
+	
+	<div id="container" class="container">
+	
+		<header class="site-header">
+			
+			<h1>Form</h1>
 
-	<main id="main">
-		<section id="" class=""> <!--make sure to enter id an class name here-->
+		</header>
+		<!-- header end -->
 
+        <main id="main" class="main">
+            <section style="font-style: italic;" class="content">
+                <h2 class="sub-head" style="font-style: initial;">Fill in the form below</h2>
+                                
+                <p style="color:red;font-size:22px;">
+                                
+                <form id="htmlForm" action="somephppage.php" method="get">
+                    <div>
+                        <label for="firstName">First Name: </label>
+                        <input type="text" name="firstName" id="firstName" placeholder="James" maxlength="20" required autofocus>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name: </label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Bond" maxlength="20" required>
+                    </div>
+                    <div>
+                        <label>Date of Birth <input type="date" name="date" id="date"></label>
+                    </div>
+
+                     <div>
+                        <h5>Gender?</h5>
+                        <label for="female">Female 
+                            <input type="radio" name="forms" id="female" checked value="female">
+                        </label>
+                        <label for="male">Male 
+                            <input type="radio" name="forms" id="male" checked value="male">
+                        </label>
+                        <label for="other">Other
+                            <input type="radio" name="forms" id="other" checked value="other">
+                        </label> 
+                        <label for="no-answer">Prefer not to answer
+                            <input type="radio" name="forms" id="no-answer" checked value="no-answer">
+                        </label> 
+                    </div>
+                    
+                    <br>
+                    <br>
+
+                    <div>
+                        <label for="streeAddress">Street Address: </label>
+                        <input type="text" name="streeAddress" required id="streeAddress">
+                    </div>
+                    <div>
+                        <label for="addressLocality">City: </label>
+                        <input type="text" name="addressLocality" required id="addressLocality">
+                    </div>
+                    <div>
+                        <label for="PostalCode">Postal Code: </label>
+                        <input type="text" name="PostalCode" required id="PostalCode">
+                    </div>
+                    <div>
+                        <label for="country">Country:</label>
+                        <select name="country" id="country">
+                            <optgroup label="Country">
+                                <option value="can" selected>Canada</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="province">Province/Territory:</label>
+                        <select name="province" id="province">
+                            <optgroup label="Province/Territory">
+                                <option value="ab" selected>Alberta</option>
+                                <option value="bc">British Columbia</option>
+                                <option value="mb">Manitoba</option>
+                                <option value="nb">New Brunswick</option>
+                                <option value="nl">Newfoundland and Labrador</option>
+                                <option value="ns">Nova Scotia</option>
+                                <option value="nt">Northwest Territories</option>
+                                <option value="on">Ontario</option>
+                                <option value="pe">Prince Edward Island</option>
+                                <option value="qc">Quebec</option>
+                                <option value="sk">Saskatchewan</option>
+                                <option value="yk">Yukon</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Email: <input type="email" name="email" id="email"></label>                      
+                    </div>
+                    <div>
+                        <label for="phone">Mobile Phone Number: </label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                    <div>
+                       <label for="pass">Password: </label>
+                       <input type="password" name="pass" required id="pass">
+                    </div>
+                    
+                    <div>
+                        <label for="textarea">Text area:</label>
+                        <textarea name="textarea" id="textarea"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label>URL: <input type="url" name="ur" id="ur"></label>
+                        <br>
+                        <br>
+                    </div>
+                 
+                    <fieldset>
+                        <legend>Select Your Hobbies/Interests</legend>
+                        
+                        <div>
+                            <!-- the checkbox is exactly what it says it is -->
+                            <label for="visual-arts">Visual Arts <input type="checkbox" name="visual-arts" id="visual-arts"></label>
+                            <label for="music">Music: listening or creating <input type="checkbox" name="music" id="music"></label>
+                            <label for="sports">Sports or Physical Activity <input type="checkbox" name="sports" id="sports"></label>
+                            <label for="nature">Outdoor activities <input type="checkbox" name="nature" id="nature"></label>
+                            <label for="shopping">Shopping <input type="checkbox" name="shopping" id="shopping"></label>
+                            <label for="reading">Reading/Writing <input type="checkbox" name="reading" id="reading"></label>
+                            <label for="socializing">Socializing <input type="checkbox" name="socializing" id="socializing"></label>
+                            <label for="tv">Watching TV <input type="checkbox" name="tv" id="tv"></label>
+                            <label for="games">Games: all types <input type="checkbox" name="games" id="games"></label>
+                   
+                        </div>
+                    </fieldset>
+
+                <div>
+                    <br>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <br>
+                    <br>
+                </div>   
+            </form>
+        </section>			
+		</main>
+
+		<footer>
+			
+			<div itemscope itemtype="http://www.algonquincollege.ca/">
+				<span itemprop="name">Erin Camelon</span>
+				<div itemscope itemtype="http://algoqnuincollege.com/PostalAddress" itemprop="address">
+					<span itemprop="streeAddress">1385 Woodroffe Ave.</span>
+					<span itemprop="addressLocality">Ottawa</span>
+					<span itemprop="addressRegion">Ontario</span>
+					<span itemprop="addressCountry">Canada</span>
+					<span itemprop="PostalCode">K2G 1V8</span>
+				</div>
+			</div>
+
+			<p>Copyright &copy; 2019 Erin Camelon</p>
+		</footer>
+	</div>
 </body>
 </html>
