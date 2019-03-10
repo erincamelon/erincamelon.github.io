@@ -6,11 +6,11 @@ body {
 header nav li a {
 	color: rgb(255,0,0);
 }
+h2 {
+		background-color:rgba(243,105,25,0.5);
+}
 p {
 		color: blue;
-}
-#container {
-	background-color:rgba(243,105,25,0.5); 
 }
 #checkbox {
 	background-color:rgba(243,105,25,0.5);

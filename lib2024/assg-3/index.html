@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
 	<style type="text/css">
 		
-        h1, h2 {
+        h1 {
 			color: purple;
 			text-align: center;
 		}
@@ -40,17 +40,19 @@
             </nav>
         </header>
 		<!-- header end -->
-    <div id="container" class="container">
+
         <main id="main" class="main">
             <section style="font-style: italic;" class="content">
                 <h2 class="sub-head" style="font-style: initial;">Fill in the form below</h2>
-
-    </div>
-                <p>
-                    Please complete all fields
-                </p>
             </section>
+    
+        <div>
+            <section id="info" class="info">
+                <p>>Please complete all fields</p>
+            </section>
+        </div>
 
+        <div>
             <section id="form" class="form">                
                 <form id="htmlForm" action="somephppage.php" method="get">
                     <div>
@@ -131,10 +133,9 @@
                         <label for="phone">Mobile Phone Number: </label>
                         <input type="tel" name="phone" 
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            required>
+                            required id="phone">
 
                     <span class="note">format: 123-456-7890</span>
-
 
                     </div>
                     <div>
@@ -180,7 +181,8 @@
                     <br>
                 </div>   
             </form>
-        </section>			
+        </section>
+        </div>		
 		</main>
 
 		<footer id="footer" class="footer">
@@ -198,6 +200,5 @@
 
 			<p>Copyright &copy; 2019 Erin Camelon</p>
 		</footer>
-	</div>
 </body>
 </html>
