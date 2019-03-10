@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-		background-color: green; 
+		background-color: rgb(46, 114, 249); 
 }
 header nav li a {
 	color: rgb(255,0,0);
@@ -13,14 +13,14 @@ p {
 		color: blue;
 }
 #checkbox {
-	background-color:rgba(243,105,25,0.5);
+	background-color:rgb(254, 254, 254);
 }
 .sub-head {
         text-decoration: underline;
 	font-weight: 100; 
 	padding: 10px;
         margin: 20 px;
-	background-color: rgba (229,11,134,0.5); 
+	background-color: rgb(254, 254, 254); 
 	border: 3px solid blue; 
 
 
