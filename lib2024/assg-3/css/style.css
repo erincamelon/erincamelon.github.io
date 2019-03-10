@@ -2,23 +2,26 @@
 
 body {
 		background-color: green; 
-	}
-h1 {
-		color:#382EC8;
-		text-align: center;
-		font-size: 50px;
-	}
-h2 {
-		color:#382EC8;
-		text-align: center;
-		font-size: 50px;
-	}
-
+}
+header nav li a {
+	color: rgb(255,0,0);
+}
 p {
-			
-		color:#A42EC8;
-		text-align: center;
-		font-size: 28px;
-		font-style: italic; 
-	}
+		color: blue;
+}
+#container {
+	background-color:rgba(243,105,25,0.5); 
+}
+#checkbox {
+	background-color:rgba(243,105,25,0.5);
+}
+.sub-head {
+        text-decoration: underline;
+	font-weight: 100; 
+	padding: 10px;
+        margin: 20 px;
+	background-color: rgba (229,11,134,0.5); 
+	border: 3px solid blue; 
+
+
 

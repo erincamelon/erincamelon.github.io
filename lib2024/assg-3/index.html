@@ -4,52 +4,54 @@
 	<meta charset="utf-8">
 	<title>Assignment 3</title>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
 	<style type="text/css">
 		
-		body {
-            background-color: green;     
-        }
-        h1 {
-			color: #382EC8;
+        h1, h2 {
+			color: purple;
 			text-align: center;
-			font-size: 50px;
-		}
-
-		h2 {
-			color: #382EC8;
-			text-align: center;
-			font-size: 20px;
 		}
 
 		p {
-			
 			color: #A42EC8;
-			text-align: center;
-			font-size: 28px;
-			font-style: italic;
+			font-size: 30px;
 		}		
+
+        img {
+            border-radius: 50%;
+        }
 
 	</style>
 </head>
 <body>
-	
-	<div id="container" class="container">
-	
-		<header class="site-header">
-			
-			<h1>Form</h1>
+	<header class="site-header">
+	   <img src="images/brain.jpg" class="images" alt="Website logo">	
+	   <h1>Form</h1>
 
-		</header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 		<!-- header end -->
-
+    <div id="container" class="container">
         <main id="main" class="main">
             <section style="font-style: italic;" class="content">
                 <h2 class="sub-head" style="font-style: initial;">Fill in the form below</h2>
-                                
-                <p style="color:red;font-size:22px;">
-                                
+
+    </div>
+                <p>
+                    Please complete all fields
+                </p>
+            </section>
+
+            <section class="form">                
                 <form id="htmlForm" action="somephppage.php" method="get">
                     <div>
                         <label for="firstName">First Name: </label>
@@ -60,22 +62,21 @@
                         <input type="text" name="lastName" id="lastName" placeholder="Bond" maxlength="20" required>
                     </div>
                     <div>
-                        <label>Date of Birth <input type="date" name="date" id="date"></label>
+                        <label>Date of Birth <input type="date" name="date" required id="date"></label>
                     </div>
-
-                     <div>
-                        <h5>Gender?</h5>
+                    <div>
+                        <h3>Gender?</h3>
                         <label for="female">Female 
                             <input type="radio" name="forms" id="female" checked value="female">
                         </label>
                         <label for="male">Male 
-                            <input type="radio" name="forms" id="male" checked value="male">
+                            <input type="radio" name="forms" id="male" value="male">
                         </label>
                         <label for="other">Other
-                            <input type="radio" name="forms" id="other" checked value="other">
+                            <input type="radio" name="forms" id="other" value="other">
                         </label> 
                         <label for="no-answer">Prefer not to answer
-                            <input type="radio" name="forms" id="no-answer" checked value="no-answer">
+                            <input type="radio" name="forms" id="no-answer" value="no-answer">
                         </label> 
                     </div>
                     
@@ -124,11 +125,17 @@
                     </div>
 
                     <div>
-                        <label>Email: <input type="email" name="email" id="email"></label>                      
+                        <label>Email: <input type="email" name="email" required id="email"></label>                      
                     </div>
                     <div>
                         <label for="phone">Mobile Phone Number: </label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" 
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required>
+
+                    <span class="note">format: 123-456-7890</span>
+
+
                     </div>
                     <div>
                        <label for="pass">Password: </label>
@@ -136,7 +143,7 @@
                     </div>
                     
                     <div>
-                        <label for="textarea">Text area:</label>
+                        <label for="textarea">Introductory Text:</label>
                         <textarea name="textarea" id="textarea"></textarea>
                     </div>
                     
@@ -147,9 +154,9 @@
                     </div>
                  
                     <fieldset>
-                        <legend>Select Your Hobbies/Interests</legend>
+                        <legend><strong>Select Your Hobbies/Interests</strong></legend>
                         
-                        <div>
+                        <div id="checkbox" class="checkbox">
                             <!-- the checkbox is exactly what it says it is -->
                             <label for="visual-arts">Visual Arts <input type="checkbox" name="visual-arts" id="visual-arts"></label>
                             <label for="music">Music: listening or creating <input type="checkbox" name="music" id="music"></label>
