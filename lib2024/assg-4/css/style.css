@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+body {
+	line-height: 1;
+	font-family: sans-serif;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Header styles */
+
+header {
+	background-color: #7CC576;
+}
+
+.logo {
+	width: 13%;
+	margin-left: 45px;
+	float: left;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+h1 {
+	font-size: 37px;
+	text-indent: 48px;
+}
+
+.main-nav a {
+	background-color: #6dcff6;
+	display: block;
+	box-sizing: border-box;
+	width: 17%;
+	height: 65px; 
+	float: left; 
+	padding: 25px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-right: 40px;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+/*main content styles*/
+
+body {
+	background-image: url("../img/circles-light.png");
+}
+
+h2 {
+	font-size: 24px;
+}
+
+.site-content {
+	float: left;
+	width:63%;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-left: 22px;
+	font-size: 14px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+.site-sidebar {
+	float: right;
+	width: 34%;
+	box-sizing: border-box;
+	margin-right: 22px;
+	font-size: 16px; 
+}
+
+.image-gallery {
+	width: 100%;
+	height: 235px;
+	padding: 22px;
+	clear: right;
+}
+
+.img-slide {
+	float: left;
+	padding-left: 80px;
+	padding-right: 80px;
+	margin-left: 18px;
+	width: 19.15%; 
+	text-align: center;	
+	font-size: 16px;
+	font-family: monospace;
+}
+
+.fig-caption {
+	padding: 15px;
+}
+
+/*footer styles*/
+
+footer {
+	background: #7CC576;	
+	width: 100%;
+	height: 110px;
+	column-count: 2;
+	font-size: 16px;
+	font-family: monospace; 
+}
+
+.col-footer {
+	margin-left: 22px;
+}
+
+.col-footer li {
+	background: #7CC576;
+	float: right;
+	display: inline;
+	padding: 5px;
+	margin: 20px;
+}
+
+
