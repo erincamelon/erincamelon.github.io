@@ -1,0 +1,424 @@
+
+
+/*font face should be added before any other styles-- this version of font face allows for the most browser 
+support. Without this rule, limited to fonts already downloaded on users computer*/
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@charset "utf-8";
+
+/*apply font family to body to make all font the same throughout. Will apply alternate font to page-title*/
+body {
+	line-height: 1;
+	font-family: 'Bree Serif', serif;
+	width: 100%;
+}
+
+/* remove bullets
+remove default margin and padding of bullets to align text with list*/
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.col-main, .col-footer {
+	width:100%;
+}
+
+/*header styles*/
+
+header {
+	background-color:#ffffff;
+	width: 100%;
+	height: 140px;
+}
+
+.page-title {
+	font-family: 'MyWebFont', Alpha Echo, sans-serif; 
+	font-size: 28px;
+	font-weight: 900;
+	margin: 3.25%;
+}
+
+/*nav bar*/
+/* margin-top to push nav bar to bottom of header*/
+/* total height 100 - padding from h1=60px*
+account for padding in width to total 100%*/
+.main-nav-container {	
+	width: 97.3%%;
+	background-color: #72a9ae;
+	height: 40px; 
+	padding-left: 2.7%;
+	margin-top: 70px;
+	
+}
+
+.main-nav-container:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport marginleft to correct that) */
+	margin-left: 17%;
+}
+
+/*float left to display links in a line*/
+.main-nav li {
+  float: left; 
+}
+
+a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+main {
+	background-image: url("../img/dynamic-style.png");
+	margin: 0;
+	width: 100%
+}
+
+.col-main {
+	height: 400px;
+}
+
+h2 {
+	font-size: 18px;
+	
+}
+
+/*mobile first*/ 
+
+.main-content {
+	float: left;
+	width: 100%;
+	margin-left: 3.25%;
+	margin-right: 3.25%;
+
+}
+
+img { 
+	width: 100%;
+	float: right;
+	margin: 3.25%;
+}
+
+/*desktop*/
+
+/*61.5%- margins*/
+
+@media only screen and (min-width: 768px) {
+.main-content {
+	float: left;
+	width: 55%;
+}
+
+img { 
+	width: 31%;
+	float: right;
+}
+}
+
+/*-------------------------------------------------------------------lightbox begins*/
+.img-container {
+  padding: 0 8px;
+}
+
+.img-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/1 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+/*----------------------------lightbox ends-------------------------------------------->
+
+
+/*table properties
+width=100-margin*/
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	
+.schedule { 
+	margin-top: 16px;	
+}
+	
+
+.table-title {
+	margin: 3.25%
+}
+table {
+	border-collapse: collapse;
+	background-color: #ffffff;
+	width: 93.5%;
+}
+
+th {
+  height: 50px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 16px;
+}
+
+/*striped table line effect*/
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+
+/*clear table format*/
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*mobile first*/
+/*account for margins in width*/
+
+.info {
+	margin:3.25%;
+	width: 93.5%;
+}
+
+
+/* alignment of input boxes
+percentages based off the parent (info)*/
+input {
+  float: right;
+  clear: both;
+  width: 69%;
+  height: 25px;
+}
+
+#province {
+	float: right;
+	clear: both;
+	width: 69%;
+	height: 25px;
+}
+
+button {
+	float: right;
+}
+
+/*account for margins in width
+top margin slightly adjusted to account for micro shift downwards due to title*/
+.card-container {
+	margin: 3.25%;
+	width: 93.5%;
+	margin-top: 3%;
+}
+	
+.card {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.75);
+	text-align: center;
+	background-color: #ffffff;
+	padding: 30px;
+}
+
+/*desktop display form and profile side by side*/
+@media only screen and (min-width: 768px) {
+	
+.info {
+	float: left;
+	width: 32%;
+}
+
+.card-container {
+	float: right;
+	width: 32%;
+}
+}
+	
+		
+
+/*profile pic-create circular picture with border radius 50%*/
+i.fas {
+	display: inline-block;
+	border-radius: 50%;
+	box-shadow: 0px 0px 2px #888;
+	padding: 0.5em 0.6em;
+}
+
+/*footer styles*/
+
+footer {
+	background-color:#454545;
+	width: 100%;
+	height: 240px;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: 500px;
+}
+
+/*footer alignment
+33.33%-margin and padding*/
+.column {
+  float: left;
+  width: 22%;
+  padding: 10px;
+  margin-left: 10%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*cannot get this centered under the title*/
+#social-media li {
+	display: inline-block;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/*centering heading with social media links*/
+#social-media h3 {
+	margin-left: 20%;
+}
+
+
+
+
+
+	
