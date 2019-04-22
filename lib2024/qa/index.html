@@ -73,6 +73,53 @@
 			<p><strong>How would you link an external style sheet? Give an example.</strong></p>
 			<p><strong>Answer:</strong>The link element goes in the head section. For example &lt; link rel="stylesheet" type="text/css" href ="mystyle.css"&gt;</p>
 		</li>
+		<li>
+			<p><strong>Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px.</strong></p>
+			<p><strong>Answer:</strong> margin: auto;
+  										width: 200px;
+  										height: 200px;
+  									    position: absolute;
+
+  			</p>
+		</li>
+		<li>
+			<p><strong>Create CSS keyframes block called "spin" that rotates an element</strong></p>
+			<p><strong>Answer:</strong>@keyframes spin { 	
+															0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } 
+										}</p>
+		</li>
+		<li>
+			<p><strong> Create CSS animation block to rotate an element that has the following properties : class "rotate-me", It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"</strong></p>
+			<p><strong>Answer:</strong>.rotate-me { 
+														animation: spin 0.5s linear infinite;
+										}</p>
+		</li>
+		<li>
+			<p><strong>How would you include create an alert with string "I love JavaScript" using JavaScript?</strong></p>
+			<p><strong>Answer:</strong>function myFunction() { 
+																alert (I love JavaScript);
+										}</p>
+		</li>
+		<li>
+			<p><strong>How would you fade out an element with id "fade-me" after a delay of 300ms using JQuery?</strong></p>
+			<p><strong>Answer:</strong>$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("#fade-me").fadeOut(300);
+  });
+});</p>
+		</li>
+		<li>
+			<p><strong>How would you select all elements with class "my-class" using Javascript and Jquery?</strong></p>
+			<p><strong>Answer:</strong>document.getElementsByClassName("example");</p>
+		</li>
+		<li>
+			<p><strong>Give an example of input field that takes phone number with format "123-456-7890"?</strong></p>
+			<p><strong>Answer:</strong>input type="tel"</p>
+		</li>
+		<li>
+			<p><strong>Among HTML, CSS, Javascript, JQuery, what language did you like the best? State the reason.</strong></p>
+			<p><strong>Answer:</strong>CSS as it dealt with the more artistic side and layout and I am more of a creative type of person</p>
+		</li>
 	</ol>	
 </body>
 </html> 

@@ -41,7 +41,7 @@ function showSlides(n) {
 }
 
 
-//form data displayed on profile card//
+//form data displayed on profile card I want a br after name, email, address and city together, province and postal code together//
  function testVariable() {
             var strText = document.getElementById("name").value;          
             var strText1 = document.getElementById("email").value;
@@ -49,6 +49,6 @@ function showSlides(n) {
             var strText3 = document.getElementById("addressLocality").value;
 			var	strText4 = document.getElementById("province").value;		
             var strText5 = document.getElementById("PostalCode").value; 
-            var result = strText + ' ' + strText1 + ' ' + strText2 + ' ' + strText3+ ' ' +strText4+ ' ' +strText5;
+            var result = strText + ' ' + strText1 + ' ' + strText2 + ' ' + strText3+ ' ' + strText4+ ' ' +strText5;
             document.getElementById('spanResult').textContent = result;
 }
