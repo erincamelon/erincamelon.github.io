@@ -43,12 +43,11 @@ function showSlides(n) {
 
 //form data displayed on profile card I want a br after name, email, address and city together, province and postal code together//
  function testVariable() {
-            var strText = document.getElementById("name").value;          
-            var strText1 = document.getElementById("email").value;
-            var strText2 = document.getElementById("streeAddress").value; 
-            var strText3 = document.getElementById("addressLocality").value;
-			var	strText4 = document.getElementById("province").value;		
-            var strText5 = document.getElementById("PostalCode").value; 
-            var result = strText + ' ' + strText1 + ' ' + strText2 + ' ' + strText3+ ' ' + strText4+ ' ' +strText5;
-            document.getElementById('spanResult').textContent = result;
-}
+    var x = document.getElementById("frm1");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+      text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("spanResult").innerHTML = text;
+  }
